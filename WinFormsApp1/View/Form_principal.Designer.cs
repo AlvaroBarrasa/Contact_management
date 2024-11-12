@@ -28,153 +28,239 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtTown = new System.Windows.Forms.TextBox();
-            this.txtPostalCode = new System.Windows.Forms.TextBox();
-            this.txtCountry = new System.Windows.Forms.TextBox();
-            this.dateTimePickerBirthday = new System.Windows.Forms.DateTimePicker();
-            this.pictureBoxProfilePicture = new System.Windows.Forms.PictureBox();
-            this.btnCargarImagen = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.dataGridViewContactos = new System.Windows.Forms.DataGridView();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.btnAgregarTelefono = new System.Windows.Forms.Button();
-            this.dataGridViewTelefonos = new System.Windows.Forms.DataGridView();
-            this.btnEliminarTelefono = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilePicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContactos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTelefonos)).BeginInit();
-            this.SuspendLayout();
+            labelName = new Label();
+            labelAddress = new Label();
+            labelTown = new Label();
+            labelPostalCode = new Label();
+            labelCountry = new Label();
+            labelBirthday = new Label();
+            labelProfilePicture = new Label();
+            labelPhone = new Label();
+            txtName = new TextBox();
+            txtAddress = new TextBox();
+            txtTown = new TextBox();
+            txtPostalCode = new TextBox();
+            txtCountry = new TextBox();
+            dateTimePickerBirthday = new DateTimePicker();
+            pictureBoxProfilePicture = new PictureBox();
+            btnCargarImagen = new Button();
+            btnGuardar = new Button();
+            btnCancelar = new Button();
+            dataGridViewContactos = new DataGridView();
+            txtTelefono = new TextBox();
+            btnEliminar = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxProfilePicture).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewContactos).BeginInit();
+            SuspendLayout();
+            // 
+            // labelName
+            // 
+            labelName.Location = new Point(15, 10);
+            labelName.Name = "labelName";
+            labelName.Size = new Size(100, 20);
+            labelName.TabIndex = 0;
+            labelName.Text = "Name:";
+            // 
+            // labelAddress
+            // 
+            labelAddress.Location = new Point(15, 40);
+            labelAddress.Name = "labelAddress";
+            labelAddress.Size = new Size(100, 20);
+            labelAddress.TabIndex = 0;
+            labelAddress.Text = "Address:";
+            // 
+            // labelTown
+            // 
+            labelTown.Location = new Point(15, 70);
+            labelTown.Name = "labelTown";
+            labelTown.Size = new Size(100, 20);
+            labelTown.TabIndex = 0;
+            labelTown.Text = "Town:";
+            // 
+            // labelPostalCode
+            // 
+            labelPostalCode.Location = new Point(15, 100);
+            labelPostalCode.Name = "labelPostalCode";
+            labelPostalCode.Size = new Size(100, 20);
+            labelPostalCode.TabIndex = 0;
+            labelPostalCode.Text = "Postal Code:";
+            // 
+            // labelCountry
+            // 
+            labelCountry.Location = new Point(15, 130);
+            labelCountry.Name = "labelCountry";
+            labelCountry.Size = new Size(100, 20);
+            labelCountry.TabIndex = 0;
+            labelCountry.Text = "Country:";
+            // 
+            // labelBirthday
+            // 
+            labelBirthday.Location = new Point(15, 160);
+            labelBirthday.Name = "labelBirthday";
+            labelBirthday.Size = new Size(100, 20);
+            labelBirthday.TabIndex = 0;
+            labelBirthday.Text = "Birthday:";
+            // 
+            // labelProfilePicture
+            // 
+            labelProfilePicture.Location = new Point(15, 190);
+            labelProfilePicture.Name = "labelProfilePicture";
+            labelProfilePicture.Size = new Size(100, 20);
+            labelProfilePicture.TabIndex = 0;
+            labelProfilePicture.Text = "Profile Picture:";
+            // 
+            // labelPhone
+            // 
+            labelPhone.Location = new Point(15, 150);
+            labelPhone.Name = "labelPhone";
+            labelPhone.Size = new Size(100, 20);
+            labelPhone.TabIndex = 0;
+            labelPhone.Text = "Phone:";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(150, 30);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(250, 20);
-            this.txtName.TabIndex = 0;
+            txtName.Location = new Point(120, 10);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(200, 23);
+            txtName.TabIndex = 14;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(150, 60);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(250, 20);
-            this.txtAddress.TabIndex = 1;
+            txtAddress.Location = new Point(120, 40);
+            txtAddress.Name = "txtAddress";
+            txtAddress.Size = new Size(200, 23);
+            txtAddress.TabIndex = 13;
             // 
             // txtTown
             // 
-            this.txtTown.Location = new System.Drawing.Point(150, 90);
-            this.txtTown.Name = "txtTown";
-            this.txtTown.Size = new System.Drawing.Size(250, 20);
-            this.txtTown.TabIndex = 2;
+            txtTown.Location = new Point(120, 70);
+            txtTown.Name = "txtTown";
+            txtTown.Size = new Size(200, 23);
+            txtTown.TabIndex = 12;
             // 
             // txtPostalCode
             // 
-            this.txtPostalCode.Location = new System.Drawing.Point(150, 120);
-            this.txtPostalCode.Name = "txtPostalCode";
-            this.txtPostalCode.Size = new System.Drawing.Size(250, 20);
-            this.txtPostalCode.TabIndex = 3;
+            txtPostalCode.Location = new Point(120, 100);
+            txtPostalCode.Name = "txtPostalCode";
+            txtPostalCode.Size = new Size(200, 23);
+            txtPostalCode.TabIndex = 11;
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(150, 150);
-            this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(250, 20);
-            this.txtCountry.TabIndex = 4;
+            txtCountry.Location = new Point(120, 130);
+            txtCountry.Name = "txtCountry";
+            txtCountry.Size = new Size(200, 23);
+            txtCountry.TabIndex = 10;
             // 
             // dateTimePickerBirthday
             // 
-            this.dateTimePickerBirthday.Location = new System.Drawing.Point(150, 180);
-            this.dateTimePickerBirthday.Name = "dateTimePickerBirthday";
-            this.dateTimePickerBirthday.Size = new System.Drawing.Size(250, 20);
-            this.dateTimePickerBirthday.TabIndex = 5;
+            dateTimePickerBirthday.Location = new Point(120, 189);
+            dateTimePickerBirthday.Name = "dateTimePickerBirthday";
+            dateTimePickerBirthday.Size = new Size(250, 23);
+            dateTimePickerBirthday.TabIndex = 5;
             // 
             // pictureBoxProfilePicture
             // 
-            this.pictureBoxProfilePicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxProfilePicture.Location = new System.Drawing.Point(450, 30);
-            this.pictureBoxProfilePicture.Name = "pictureBoxProfilePicture";
-            this.pictureBoxProfilePicture.Size = new System.Drawing.Size(100, 100);
-            this.pictureBoxProfilePicture.TabIndex = 6;
-            this.pictureBoxProfilePicture.TabStop = false;
+            pictureBoxProfilePicture.BackColor = Color.Transparent;
+            pictureBoxProfilePicture.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxProfilePicture.Location = new Point(450, 30);
+            pictureBoxProfilePicture.Name = "pictureBoxProfilePicture";
+            pictureBoxProfilePicture.Size = new Size(100, 100);
+            pictureBoxProfilePicture.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxProfilePicture.TabIndex = 6;
+            pictureBoxProfilePicture.TabStop = false;
             // 
             // btnCargarImagen
             // 
-            this.btnCargarImagen.Location = new System.Drawing.Point(450, 140);
-            this.btnCargarImagen.Name = "btnCargarImagen";
-            this.btnCargarImagen.Size = new System.Drawing.Size(100, 23);
-            this.btnCargarImagen.TabIndex = 7;
-            this.btnCargarImagen.Text = "Cargar Imagen";
-            this.btnCargarImagen.UseVisualStyleBackColor = true;
-            this.btnCargarImagen.Click += new System.EventHandler(this.btnCargarImagen_Click);
+            btnCargarImagen.Location = new Point(450, 140);
+            btnCargarImagen.Name = "btnCargarImagen";
+            btnCargarImagen.Size = new Size(100, 23);
+            btnCargarImagen.TabIndex = 7;
+            btnCargarImagen.Text = "Cargar Imagen";
+            btnCargarImagen.UseVisualStyleBackColor = true;
+            btnCargarImagen.Click += btnCargarImagen_Click;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(150, 210);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(100, 23);
-            this.btnGuardar.TabIndex = 8;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            btnGuardar.Location = new Point(150, 227);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(100, 23);
+            btnGuardar.TabIndex = 8;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(300, 210);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(100, 23);
-            this.btnCancelar.TabIndex = 9;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.LimpiarCampos);
+            btnCancelar.Location = new Point(300, 227);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(100, 23);
+            btnCancelar.TabIndex = 9;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += LimpiarCampos;
             // 
             // dataGridViewContactos
             // 
-            this.dataGridViewContactos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewContactos.Location = new System.Drawing.Point(12, 250);
-            this.dataGridViewContactos.Name = "dataGridViewContactos";
-            this.dataGridViewContactos.Size = new System.Drawing.Size(760, 150);
-            this.dataGridViewContactos.TabIndex = 10;
-            this.dataGridViewContactos.SelectionChanged += new System.EventHandler(this.dataGridViewContactos_SelectionChanged);
+            dataGridViewContactos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewContactos.Location = new Point(12, 356);
+            dataGridViewContactos.Name = "dataGridViewContactos";
+            dataGridViewContactos.Size = new Size(600, 200);
+            dataGridViewContactos.TabIndex = 0;
+            dataGridViewContactos.TabStop = false;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(150, 400);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(250, 20);
-            this.txtTelefono.TabIndex = 11;
+            txtTelefono.Location = new Point(120, 159);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(200, 23);
+            txtTelefono.TabIndex = 1;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.Location = new Point(250, 257);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(100, 30);
+            btnEliminar.TabIndex = 0;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(784, 661);
-            this.Controls.Add(this.btnEliminarTelefono);
-            this.Controls.Add(this.dataGridViewTelefonos);
-            this.Controls.Add(this.btnAgregarTelefono);
-            this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.dataGridViewContactos);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnCargarImagen);
-            this.Controls.Add(this.pictureBoxProfilePicture);
-            this.Controls.Add(this.dateTimePickerBirthday);
-            this.Controls.Add(this.txtCountry);
-            this.Controls.Add(this.txtPostalCode);
-            this.Controls.Add(this.txtTown);
-            this.Controls.Add(this.txtAddress);
-            this.Controls.Add(this.txtName);
-            this.Name = "Form1";
-            this.Text = "Gestión de Contactos";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilePicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContactos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTelefonos)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            ClientSize = new Size(784, 661);
+            Controls.Add(txtTelefono);
+            Controls.Add(dataGridViewContactos);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnGuardar);
+            Controls.Add(btnCargarImagen);
+            Controls.Add(pictureBoxProfilePicture);
+            Controls.Add(dateTimePickerBirthday);
+            Controls.Add(txtCountry);
+            Controls.Add(txtPostalCode);
+            Controls.Add(txtTown);
+            Controls.Add(txtAddress);
+            Controls.Add(txtName);
+            Name = "Form1";
+            Text = "Gestión de Contactos";
+            ((System.ComponentModel.ISupportInitialize)pictureBoxProfilePicture).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewContactos).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelAddress;
+        private System.Windows.Forms.Label labelTown;
+        private System.Windows.Forms.Label labelPostalCode;
+        private System.Windows.Forms.Label labelCountry;
+        private System.Windows.Forms.Label labelBirthday;
+        private System.Windows.Forms.Label labelProfilePicture;
+        private System.Windows.Forms.Label labelPhone;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtTown;
         private System.Windows.Forms.TextBox txtPostalCode;
@@ -186,7 +272,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DataGridView dataGridViewContactos;
         private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.Button btnAgregarTelefono;
         private System.Windows.Forms.DataGridView dataGridViewTelefonos;
         private System.Windows.Forms.Button btnEliminarTelefono;
     }

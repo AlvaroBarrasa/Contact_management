@@ -76,12 +76,31 @@ namespace WinFormsApp1
         private void btnCargarImagen_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Imagenes|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                pictureBoxProfilePicture.Image = System.Drawing.Image.FromFile(openFileDialog.FileName);
+                pictureBoxProfilePicture.Image = Image.FromFile(openFileDialog.FileName);
             }
         }
-        
+
+
+        private void LimpiarCampos(object sender, EventArgs e)
+        {
+            txtName.Clear();
+            txtAddress.Clear();
+            txtTown.Clear();
+            txtPostalCode.Clear();
+            txtCountry.Clear();
+            txtTelefono.Clear();
+
+            dateTimePickerBirthday.Value = DateTime.Now;
+
+            pictureBoxProfilePicture.Image = null;
+
+            dataGridViewContactos.ClearSelection();
+        }
+
+
         private void LimpiarCampos()
         {
             txtName.Clear();
@@ -94,7 +113,31 @@ namespace WinFormsApp1
             _contactoActual = null; 
         }
 
-        
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewContactos.SelectedRows.Count > 0)
+            {
+                int contactoID = Convert.ToInt32(dataGridViewContactos.SelectedRows[0].Cells[0].Value);
+                using (var context = new AppDbContext())
+                {
+                    var contacto = context.Contacts.Find(contactoID);
+                    if (contacto != null)
+                    {
+                        context.Contacts.Remove(contacto);
+                        context.SaveChanges();
+                    }
+                }
+                CargarContactos();
+                LimpiarCampos();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecciona un contacto para eliminar.");
+            }
+        }
+
+
+
         private void dataGridViewContactos_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridViewContactos.SelectedRows.Count > 0)
